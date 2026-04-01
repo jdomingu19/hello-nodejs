@@ -11,6 +11,9 @@
     "start": "node src/index.js",
     "start:dev": "echo 'Hello, from start:dev script!'",
     "start:stage": "echo 'Hello, from start:stage script!'",
-    "dev": "echo 'Hello, from dev script!'"
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

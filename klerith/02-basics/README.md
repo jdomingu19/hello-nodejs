@@ -42,4 +42,16 @@ Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui temp
 npm run start:stage
 ```
 
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm install --save-dev nodemon
+```
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm install -D nodemon
+```
+
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
