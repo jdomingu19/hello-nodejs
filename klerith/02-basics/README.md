@@ -1,0 +1,15 @@
+# Basics Folder
+
+In non consectetur sint consequat id. In proident non dolore do elit. Eiusmod anim mollit non voluptate dolor minim et.
+
+> Do cillum Lorem deserunt culpa consequat et aliqua incididunt veniam quis consequat excepteur. Sunt excepteur enim cillum incididunt laboris irure excepteur.
+
+## 📦 Commands Used
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm init
+```
+
+> Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)

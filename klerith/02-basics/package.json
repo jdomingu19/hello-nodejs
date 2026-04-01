@@ -1,0 +1,12 @@
+{
+  "name": "02-basics",
+  "version": "0.0.1",
+  "description": "My first Node.js application!",
+  "license": "ISC",
+  "author": "jdomingu19",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
