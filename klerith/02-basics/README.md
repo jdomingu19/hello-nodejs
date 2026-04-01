@@ -12,4 +12,34 @@ Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui temp
 npm init
 ```
 
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm run
+```
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm start
+```
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm run dev
+```
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm run start:dev
+```
+
+Laboris eiusmod minim id tempor ad amet nisi officia amet reprehenderit qui tempor duis.
+
+```bash
+npm run start:stage
+```
+
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
