@@ -7,8 +7,8 @@
 
 // --- Class 23: imports & exports ---
 
-// Import the entire exported object from 01-email-template
-const templateContent = require("./js-foundation/01-email-template");
+// Import the entire exported object from 01-template
+const templateContent = require("./js-foundation/01-template");
 
 console.log(templateContent); // { emailTemplate: '...' }
 console.log(typeof templateContent); // object
@@ -17,7 +17,12 @@ console.log(templateContent.emailTemplate); // '<div>...</div>'
 console.log(typeof templateContent.emailTemplate); // string
 
 // Import only the emailTemplate property using object destructuring
-const { emailTemplate } = require("./js-foundation/01-email-template");
+const { emailTemplate } = require("./js-foundation/01-template");
 
 console.log(emailTemplate); // '<div>...</div>'
 console.log(typeof emailTemplate); // string
+
+// --- Class 25: Default Environment Variables ---
+
+// Import and execute the destructuring example file
+require("./js-foundation/02-destructuring");

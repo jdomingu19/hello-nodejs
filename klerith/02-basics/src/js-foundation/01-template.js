@@ -1,6 +1,6 @@
 // Hello, Node.js! @jdomingu19
 // Udemy Course by @Klerith (2023)
-// src/js-foundation/01-email-template.js
+// src/js-foundation/01-template.js
 
 // --- Class 23: imports & exports ---
 
