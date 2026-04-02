@@ -46,12 +46,17 @@
 // --- Class 28: Arrow Functions ---
 
 // Import the getUserById function from the arrow-functions module
-const { getUserById } = require("./js-foundation/04-arrow-functions");
+// const { getUserById } = require("./js-foundation/04-arrow-functions");
 
 // Call the function with a specific id and handle the result using a callback
-const id = 1;
-getUserById(id, (error, user) => {
-  if (error) throw new Error(error);
-  // Log the user object when found
-  console.log(user); // { id: 1, name: 'Jesús' }
-});
+// const id = 1;
+// getUserById(id, (error, user) => {
+//   if (error) throw new Error(error);
+//   // Log the user object when found
+//   console.log(user); // { id: 1, name: 'Jesús' }
+// });
+
+// --- Class 29: Factory Functions Introduction ---
+
+// Import and execute the factory function example file
+require("./js-foundation/05-factory-functions");
