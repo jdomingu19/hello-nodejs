@@ -95,14 +95,36 @@
 const getPokemonById = require("./js-foundation/06-promises");
 
 // Verify that the imported value is a function
-console.log(getPokemonById); // [Function: getPokemonById]
-console.log(typeof getPokemonById); // function
+// console.log(getPokemonById); // [Function: getPokemonById]
+// console.log(typeof getPokemonById); // function
 
 // Call the function with a specific Pokémon ID and log the result
-getPokemonById(104, (pokemon) => {
-  console.log(pokemon); // cubone
-});
+// getPokemonById(104, (pokemon) => {
+//   console.log(pokemon); // cubone
+// });
 
-getPokemonById(105, (pokemon) => {
-  console.log(pokemon); // marowak
-});
+// getPokemonById(105, (pokemon) => {
+//   console.log(pokemon); // marowak
+// });
+
+// --- Class 34: Promise Chaining ---
+
+// Call getPokemonById with ID 104 and handle the Promise
+getPokemonById(104)
+  .then((pokemon) => console.log({ pokemon }))
+  .catch((error) => {
+    console.log("Handled error:", error);
+  })
+  .finally(() => console.log("Process finished!"));
+// { pokemon: 'cubone' }
+// Process finished!
+
+// Call getPokemonById with ID 105 and handle the Promise
+getPokemonById(105)
+  .then((pokemon) => console.log({ pokemon }))
+  .catch((error) => {
+    console.log("Handled error:", error);
+  })
+  .finally(() => console.log("Process finished!"));
+// { pokemon: 'marowak' }
+// Process finished!
