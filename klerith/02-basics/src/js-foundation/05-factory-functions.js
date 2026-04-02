@@ -53,7 +53,7 @@
 // --- Class 31: Adapter Pattern ---
 
 // Import adapter functions from the plugins index
-const { getUUIDV4, getAge } = require("../plugins/");
+// const { getUUIDV4, getAge } = require("../plugins/");
 
 /**
  * Builds a person object using adapter functions.
@@ -71,23 +71,23 @@ const { getUUIDV4, getAge } = require("../plugins/");
  * the application to depend on a consistent interface rather than
  * directly on external packages.
  */
-const buildPerson = ({ name, birthdate }) => {
-  return {
-    id: getUUIDV4(),
-    name,
-    birthdate,
-    age: getAge(birthdate),
-  };
-};
+// const buildPerson = ({ name, birthdate }) => {
+//   return {
+//     id: getUUIDV4(),
+//     name,
+//     birthdate,
+//     age: getAge(birthdate),
+//   };
+// };
 
 // Define the input data for a sample person
-const johnInfo = { name: "John Doe", birthdate: "1996-5-7" };
+// const johnInfo = { name: "John Doe", birthdate: "1996-5-7" };
 
 // Use the factory function to build a person object
-const johnPerson = buildPerson(johnInfo);
+// const johnPerson = buildPerson(johnInfo);
 
 // Display the resulting person object in a table format
-console.table(johnPerson);
+// console.table(johnPerson);
 // ┌───────────┬────────────────────────────────────────┐
 // │ (index)   │ Values                                 │
 // ├───────────┼────────────────────────────────────────┤
@@ -96,3 +96,37 @@ console.table(johnPerson);
 // │ birthdate │ '1996-5-7'                             │
 // │ age       │ 29                                     │
 // └───────────┴────────────────────────────────────────┘
+
+// --- Class 32: Applying Factory Constructor ---
+
+/**
+ * Factory constructor that builds a specialized person creator.
+ *
+ * @param dependencies - An object containing adapter functions:
+ * - `getUUIDV4`: generates unique identifiers
+ * - `getAge`: calculates age from a birthdate
+ *
+ * @returns A function (`makePerson`) that accepts person data and returns
+ * a new person object with id, name, birthdate, and age.
+ *
+ * @remarks
+ * This pattern allows injecting dependencies (adapters) into the factory,
+ * making the code more flexible and testable. The resulting function
+ * encapsulates object creation logic while remaining decoupled from
+ * external libraries.
+ */
+const buildMakePerson = ({ getUUIDV4, getAge }) => {
+  return ({ name, birthdate }) => {
+    return {
+      id: getUUIDV4(),
+      name,
+      birthdate,
+      age: getAge(birthdate),
+    };
+  };
+};
+
+// Export the factory constructor
+module.exports = {
+  buildMakePerson,
+};

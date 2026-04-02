@@ -59,4 +59,32 @@
 // --- Class 29: Factory Functions Introduction ---
 
 // Import and execute the factory function example file
-require("./js-foundation/05-factory-functions");
+// require("./js-foundation/05-factory-functions");
+
+// --- Class 32: Applying Factory Constructor ---
+
+// Import adapter functions from the plugins index
+const { getUUIDV4, getAge } = require("./plugins/");
+
+// Import the factory constructor from factory-functions module
+const { buildMakePerson } = require("./js-foundation/05-factory-functions");
+
+// Create a specialized person builder by injecting dependencies
+const makePerson = buildMakePerson({ getUUIDV4, getAge });
+
+// Define the input data for a sample person
+const johnInfo = { name: "John Doe", birthdate: "1996-5-7" };
+
+// Use the specialized factory function to build a person object
+const johnPerson = makePerson(johnInfo);
+
+// Display the resulting person object in a table format
+console.table(johnPerson);
+// ┌───────────┬────────────────────────────────────────┐
+// │ (index)   │ Values                                 │
+// ├───────────┼────────────────────────────────────────┤
+// │ id        │ '82f3e096-9b8f-4c79-8562-898ab08a9947' │
+// │ name      │ 'John Doe'                             │
+// │ birthdate │ '1996-5-7'                             │
+// │ age       │ 29                                     │
+// └───────────┴────────────────────────────────────────┘
