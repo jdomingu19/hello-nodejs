@@ -26,3 +26,19 @@ console.log(typeof emailTemplate); // string
 
 // Import and execute the destructuring example file
 require("./js-foundation/02-destructuring");
+
+// --- Class 27: Callbacks ---
+
+// Import the getUserById function from the callbacks module
+const { getUserById } = require("./js-foundation/03-callbacks");
+
+// Define the id to search for and execute the callback function
+const id = 1;
+getUserById(id, function (error, user) {
+  if (error) {
+    // Handle the error case by throwing a new Error
+    throw new Error(error);
+  }
+  // Log the user object when found
+  console.log(user); // { id: 1, name: 'Jesús' }
+});
