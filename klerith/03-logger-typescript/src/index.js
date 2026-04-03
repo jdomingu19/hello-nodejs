@@ -92,7 +92,7 @@
 // --- Class 33: Promises ---
 
 // Import the getPokemonById function from the promises module
-const getPokemonById = require("./js-foundation/06-promises");
+// const getPokemonById = require("./js-foundation/06-promises");
 
 // Verify that the imported value is a function
 // console.log(getPokemonById); // [Function: getPokemonById]
@@ -110,21 +110,33 @@ const getPokemonById = require("./js-foundation/06-promises");
 // --- Class 34: Promise Chaining ---
 
 // Call getPokemonById with ID 104 and handle the Promise
-getPokemonById(104)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((error) => {
-    console.log("Handled error:", error);
-  })
-  .finally(() => console.log("Process finished!"));
+// getPokemonById(104)
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((error) => {
+//     console.log("Handled error:", error);
+//   })
+//   .finally(() => console.log("Process finished!"));
 // { pokemon: 'cubone' }
 // Process finished!
 
 // Call getPokemonById with ID 105 and handle the Promise
-getPokemonById(105)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((error) => {
-    console.log("Handled error:", error);
-  })
-  .finally(() => console.log("Process finished!"));
+// getPokemonById(105)
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((error) => {
+//     console.log("Handled error:", error);
+//   })
+//   .finally(() => console.log("Process finished!"));
 // { pokemon: 'marowak' }
 // Process finished!
+
+// --- Class 42: Winston, Node.js Logger ---
+
+// Import the buildLogger function from the plugins folder
+const { buildLogger } = require("./plugins");
+
+// Create a logger instance scoped to the "index.js" service
+const logger = buildLogger("index.js");
+
+// Log a message at info level, including the service metadata
+logger.log("Hello, Node.js!");
+// Output example in console: info: Hello, Node.js! {"service":"index.js"}

@@ -4,15 +4,18 @@
 
 // --- Class 31: Adapter Pattern ---
 // --- Class 36: Adapter Pattern with FetchAPI ---
+// --- Class 42: Winston, Node.js Logger ---
 
 // Import adapter functions from individual plugin files
 const { getUUIDV4 } = require("./get-uuidv4.plugin");
 const { getAge } = require("./get-age.plugin");
 const { httpClientPlugin } = require("./http-client.plugin");
+const buildLogger = require("./logger.plugin");
 
 // Export a unified interface for all plugins
 module.exports = {
   getUUIDV4,
   getAge,
   http: httpClientPlugin,
+  buildLogger,
 };
