@@ -7,15 +7,18 @@
 // Import the Winston logging library
 const winston = require("winston");
 
+// --- Class 43: Winston, Node.js Logger Part 2 ---
+
+// Import formatting utilities from Winston
+const { combine, timestamp, json } = winston.format;
+
 // Create a Winston logger instance with configuration
 const logger = winston.createLogger({
   // Minimum log level to capture (info and above)
   level: "info",
 
-  // Format logs as JSON objects
-  format: winston.format.json(),
-
-  // defaultMeta: { service: "user-service" },
+  // Combine multiple formats: add timestamp and output as JSON
+  format: combine(timestamp(), json()),
 
   // Define transports (destinations for logs)
   transports: [
@@ -43,12 +46,26 @@ logger.add(
  * Builds a logger scoped to a specific service.
  *
  * @param service - The name of the service or module using the logger.
- * @returns An object exposing a `log` method for info-level logging.
+ * @returns An object exposing `log` and `error` methods.
+ *
+ * @remarks
+ * - `log`: records info-level messages with service metadata.
+ * - `error`: records error-level messages with timestamp and service metadata.
  */
 module.exports = function buildLogger(service) {
   return {
     log: (message) => {
-      logger.log("info", { message, service });
+      logger.log("info", {
+        message,
+        service,
+      });
+    },
+    error: (message) => {
+      logger.error("error", {
+        message,
+        service,
+        at: new Date().toISOString(),
+      });
     },
   };
 };

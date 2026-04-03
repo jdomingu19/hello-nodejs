@@ -3,3 +3,30 @@
 {"level":"info","message":"Hello, Node.js!","service":"index.js"}
 {"level":"info","message":"Hello, Node.js!","service":"index.js"}
 {"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T22:59:53.821Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:00:01.762Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:00:05.981Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:01:01.326Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:01:22.467Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:01:30.917Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"at":"2026-04-03T23:01:54.108Z","level":"error","message":"error Something went wrong...","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js","timestamp":"2026-04-03T23:02:13.276Z"}
+{"at":"2026-04-03T23:02:13.279Z","level":"error","message":"error Something went wrong...","service":"index.js","timestamp":"2026-04-03T23:02:13.279Z"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js","timestamp":"2026-04-03T23:02:18.743Z"}
+{"at":"2026-04-03T23:02:18.746Z","level":"error","message":"error Something went wrong...","service":"index.js","timestamp":"2026-04-03T23:02:18.746Z"}

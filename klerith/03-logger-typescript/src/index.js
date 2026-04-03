@@ -140,3 +140,10 @@ const logger = buildLogger("index.js");
 // Log a message at info level, including the service metadata
 logger.log("Hello, Node.js!");
 // Output example in console: info: Hello, Node.js! {"service":"index.js"}
+
+// --- Class 43: Winston, Node.js Logger Part 2 ---
+
+// Log an error message directly using the logger instance
+logger.error("Something went wrong...");
+// Output example in console:
+// {"at":"2026-04-03T23:02:18.746Z","level":"error","message":"error Something went wrong...","service":"index.js","timestamp":"2026-04-03T23:02:18.746Z"}
