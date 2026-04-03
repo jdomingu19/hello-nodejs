@@ -1,0 +1,24 @@
+{
+  "name": "02-basics",
+  "version": "0.0.1",
+  "description": "My first Node.js application!",
+  "license": "ISC",
+  "author": "jdomingu19",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start:dev": "echo 'Hello, from start:dev script!'",
+    "start:stage": "echo 'Hello, from start:stage script!'",
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "axios": "^1.14.0",
+    "get-age": "^1.0.1",
+    "uuid": "^13.0.0"
+  }
+}
