@@ -1,0 +1,5 @@
+{"level":"info","message":"Hello, Node.js!","service":"user-service"}
+{"level":"info","message":"Hello, Node.js!"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
+{"level":"info","message":"Hello, Node.js!","service":"index.js"}
