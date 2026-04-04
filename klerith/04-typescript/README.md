@@ -54,4 +54,22 @@ Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occae
 npx nodemon dist/index.js
 ```
 
+Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+
+```bash
+npm install -D ts-node nodemon
+```
+
+Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+
+```bash
+npm run dev
+```
+
+Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+
+```bash
+npm install -D rimraf
+```
+
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
