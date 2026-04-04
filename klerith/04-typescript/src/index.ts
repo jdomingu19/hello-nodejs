@@ -1,11 +1,16 @@
 // Hello, Node.js! @jdomingu19
 // Udemy Course by @Klerith (2023)
-// src/index.js
+// src/index.ts
 
 // --- Class 44: TypeScript Basic Project ---
+// --- Class 45: TypeScript Configuration in Node.js ---
 
-// Define an array of heroes with id, name, and alias
-const heroesArray = [
+// Define a typed array of heroes with id, name, and alias
+const heroesArray: {
+  id: number;
+  name: string;
+  alias: string;
+}[] = [
   {
     id: 1,
     name: "Link",
@@ -36,11 +41,10 @@ console.table(heroesArray);
 /**
  * Finds a hero object in the `heroesArray` by its unique identifier.
  *
- * @param {number} heroId - The numeric identifier of the hero to search for.
- * @returns {{id: number, name: string, alias: string} | undefined}
- * The hero object if found, otherwise `undefined`.
+ * @param heroId - The numeric identifier of the hero to search for.
+ * @returns The hero object if found, otherwise `undefined`.
  */
-const findHeroById = (heroId) => {
+const findHeroById = (heroId: number) => {
   return heroesArray.find((hero) => {
     return hero.id === heroId;
   });
@@ -59,9 +63,9 @@ console.table(rivali); // Shows Rivali object
 console.table(heroNotFound); // undefined
 
 // Access and print the alias property of each hero
-console.log(link.alias); // Hero of Time
-console.log(zelda.alias); // Princess of Hyrule
-console.log(rivali.alias); // Champion of the Rito
+console.log(link?.alias); // Hero of Time
+console.log(zelda?.alias); // Princess of Hyrule
+console.log(rivali?.alias); // Champion of the Rito
 
 // Safely access alias of a non-existing hero using optional chaining and nullish coalescing
 console.log(heroNotFound?.alias ?? "Hero not found"); // Hero not found
