@@ -6,67 +6,67 @@ Magna et eiusmod veniam aliqua do id. Consequat reprehenderit cupidatat est proi
 
 ## 📦 Used Commands
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Initialize a new Node.js project with default settings and generate a `package.json` file.
 
 ```bash
 npm init -y
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Run the JavaScript entry file directly with Node.js.
 
 ```bash
 node src/index.js
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Run the entry file without specifying the `.js` extension (Node.js automatically resolves it).
 
 ```bash
 node src/index
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Start the application with automatic restart on file changes using `nodemon`.
 
 ```bash
 npx nodemon src/index.js
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Install TypeScript and Node.js type definitions as development dependencies.
 
 ```bash
 npm i -D typescript @types/node
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Initialize a TypeScript configuration file (`tsconfig.json`) with custom output and source directories.
 
 ```bash
 npx tsc --init --outDir dist/ --rootDir src
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Run the TypeScript compiler in watch mode to recompile automatically on file changes.
 
 ```bash
 npx tsc --watch
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Execute the compiled JavaScript output with `nodemon` to enable hot reload.
 
 ```bash
 npx nodemon dist/index.js
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Install `ts-node` (to run TypeScript directly) and `nodemon` (for hot reload) as development dependencies.
 
 ```bash
 npm install -D ts-node nodemon
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Run the project in development mode using the `dev` script defined in `package.json`.
 
 ```bash
 npm run dev
 ```
 
-Elit aliqua minim ea veniam occaecat officia consequat culpa veniam dolore occaecat labore.
+Install `rimraf`, a utility to remove files and folders (used to clean the `dist/` directory before builds).
 
 ```bash
 npm install -D rimraf
