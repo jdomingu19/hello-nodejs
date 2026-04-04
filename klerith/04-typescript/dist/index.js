@@ -2,28 +2,15 @@
 // Hello, Node.js! @jdomingu19
 // Udemy Course by @Klerith (2023)
 // src/index.ts
+Object.defineProperty(exports, "__esModule", { value: true });
 // --- Class 44: TypeScript Basic Project ---
 // --- Class 45: TypeScript Configuration in Node.js ---
-// Define a typed array of heroes with id, name, and alias
-const heroesArray = [
-    {
-        id: 1,
-        name: "Link",
-        alias: "Hero of Time",
-    },
-    {
-        id: 2,
-        name: "Zelda",
-        alias: "Princess of Hyrule",
-    },
-    {
-        id: 3,
-        name: "Rivali",
-        alias: "Champion of the Rito",
-    },
-];
+// --- Class 47: TypeScript & Node.js working together ---
+// Import heroes data and service function
+const heroes_1 = require("./data/heroes");
+const heroes_service_1 = require("./services/heroes.service");
 // Display the heroes array in a tabular format for readability
-console.table(heroesArray);
+console.table(heroes_1.heroesArray);
 // ┌─────────┬────┬──────────┬────────────────────────┐
 // │ (index) │ id │ name     │ alias                  │
 // ├─────────┼────┼──────────┼────────────────────────┤
@@ -31,22 +18,11 @@ console.table(heroesArray);
 // │ 1       │ 2  │ 'Zelda'  │ 'Princess of Hyrule'   │
 // │ 2       │ 3  │ 'Rivali' │ 'Champion of the Rito' │
 // └─────────┴────┴──────────┴────────────────────────┘
-/**
- * Finds a hero object in the `heroesArray` by its unique identifier.
- *
- * @param heroId - The numeric identifier of the hero to search for.
- * @returns The hero object if found, otherwise `undefined`.
- */
-const findHeroById = (heroId) => {
-    return heroesArray.find((hero) => {
-        return hero.id === heroId;
-    });
-};
 // Retrieve heroes by their ids and test with a non-existing id
-const link = findHeroById(1);
-const zelda = findHeroById(2);
-const rivali = findHeroById(3);
-const heroNotFound = findHeroById(4);
+const link = (0, heroes_service_1.findHeroById)(1);
+const zelda = (0, heroes_service_1.findHeroById)(2);
+const rivali = (0, heroes_service_1.findHeroById)(3);
+const heroNotFound = (0, heroes_service_1.findHeroById)(4);
 // Display each hero object in table format
 console.table(link); // Shows Link object
 console.table(zelda); // Shows Zelda object

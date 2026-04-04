@@ -4,29 +4,11 @@
 
 // --- Class 44: TypeScript Basic Project ---
 // --- Class 45: TypeScript Configuration in Node.js ---
+// --- Class 47: TypeScript & Node.js working together ---
 
-// Define a typed array of heroes with id, name, and alias
-const heroesArray: {
-  id: number;
-  name: string;
-  alias: string;
-}[] = [
-  {
-    id: 1,
-    name: "Link",
-    alias: "Hero of Time",
-  },
-  {
-    id: 2,
-    name: "Zelda",
-    alias: "Princess of Hyrule",
-  },
-  {
-    id: 3,
-    name: "Rivali",
-    alias: "Champion of the Rito",
-  },
-];
+// Import heroes data and service function
+import { heroesArray } from "./data/heroes";
+import { findHeroById } from "./services/heroes.service";
 
 // Display the heroes array in a tabular format for readability
 console.table(heroesArray);
@@ -37,18 +19,6 @@ console.table(heroesArray);
 // │ 1       │ 2  │ 'Zelda'  │ 'Princess of Hyrule'   │
 // │ 2       │ 3  │ 'Rivali' │ 'Champion of the Rito' │
 // └─────────┴────┴──────────┴────────────────────────┘
-
-/**
- * Finds a hero object in the `heroesArray` by its unique identifier.
- *
- * @param heroId - The numeric identifier of the hero to search for.
- * @returns The hero object if found, otherwise `undefined`.
- */
-const findHeroById = (heroId: number) => {
-  return heroesArray.find((hero) => {
-    return hero.id === heroId;
-  });
-};
 
 // Retrieve heroes by their ids and test with a non-existing id
 const link = findHeroById(1);
