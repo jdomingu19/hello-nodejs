@@ -106,4 +106,22 @@ Install type definitions for the `uuid` package, enabling TypeScript to provide 
 npm i -D @types/uuid
 ```
 
+Install Jest, its TypeScript type definitions, the `ts-jest` transformer, and Supertest as development dependencies. These packages provide the testing framework, type safety, and HTTP request testing utilities.
+
+```bash
+npm install -D jest @types/jest ts-jest supertest
+```
+
+Initialize a Jest configuration interactively. This command has been **deprecated**, but it was previously used to generate a `jest.config.js ` file with customizable options.
+
+```bash
+npx jest --init # deprecated
+```
+
+Create a Jest configuration using the modern setup command. This generates a `jest.config.ts` or `jest.config.js` file with sensible defaults for TypeScript projects.
+
+```bash
+npx create-jest
+```
+
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
