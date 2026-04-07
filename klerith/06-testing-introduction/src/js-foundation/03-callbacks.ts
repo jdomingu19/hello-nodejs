@@ -46,6 +46,8 @@ export const getUserById = (id: number, callback: CallbackInterface) => {
   });
 
   !user
-    ? callback(`User not found with ID ${id}...`)
+    ? setTimeout(() => {
+        callback(`User not found with ID ${id}...`);
+      }, 2500)
     : callback(undefined, user);
 };

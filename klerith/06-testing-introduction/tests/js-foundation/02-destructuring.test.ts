@@ -1,6 +1,6 @@
 // Hello, Node.js! @jdomingu19
 // Udemy Course by @Klerith (2023)
-// src/js-foundation/02-destructuring.ts
+// tests/js-foundation/02-destructuring.test.ts
 
 // --- Class 25: Default Environment Variables ---
 // --- Class 48: Migrate Project to TypeScript ---
