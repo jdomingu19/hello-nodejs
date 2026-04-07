@@ -18,7 +18,7 @@ interface UserInterface {
 // }[];
 
 // Create a typed array of users implementing the UserInterface
-const users: UserInterface[] = [
+export const users: UserInterface[] = [
   {
     id: 1,
     name: "Jesús",
