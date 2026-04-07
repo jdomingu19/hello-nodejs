@@ -4,16 +4,17 @@
 
 // --- Class 25: Default Environment Variables ---
 // --- Class 48: Migrate Project to TypeScript ---
+// --- Class 59: Testing 02-destructuring.ts script with Jest ---
 
 // Define a typed array of hero names and apply array destructuring
-const heroesArray: string[] = ["Rivali", "Zelda", "Link"];
-const [, zelda, link] = heroesArray;
+export const heroesArray: string[] = ["Rivali", "Link", "Zelda"];
+const [, link, zelda] = heroesArray;
 
 // Display selected heroes in a tabular format
-// console.table({ zelda, link });
+// console.table({ link, zelda });
 // ┌─────────┬─────────┐
 // │ (index) │ Values  │
 // ├─────────┼─────────┤
-// │ zelda   │ 'Zelda' │
 // │ link    │ 'Link'  │
+// │ zelda   │ 'Zelda' │
 // └─────────┴─────────┘

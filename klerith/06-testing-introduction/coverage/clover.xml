@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1775577600136" clover="3.2.0">
-  <project timestamp="1775577600136" name="All files">
-    <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="15" coveredelements="15" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
-    <file name="01-template.ts" path="D:\dev\hello-nodejs\klerith\06-testing-introduction\src\js-foundation\01-template.ts">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+<coverage generated="1775579376193" clover="3.2.0">
+  <project timestamp="1775579376193" name="All files">
+    <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="20" coveredelements="20" complexity="0" loc="20" ncloc="20" packages="1" files="1" classes="1"/>
+    <file name="02-destructuring.ts" path="D:\dev\hello-nodejs\klerith\06-testing-introduction\src\js-foundation\02-destructuring.ts">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
@@ -19,6 +19,11 @@
       <line num="13" count="1" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
