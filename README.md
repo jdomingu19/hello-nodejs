@@ -18,17 +18,11 @@
 >
 > Eu ea Lorem elit laborum non velit aute adipisicing nostrud eiusmod adipisicing velit incididunt veniam. Elit tempor anim eu culpa laboris. Sunt duis dolor adipisicing do. Ad quis non magna eiusmod nulla laborum. Mollit aliqua et cillum veniam labore do officia voluptate cillum enim. Ex laboris magna sit enim excepteur reprehenderit deserunt. Ex id nisi nulla mollit.
 
-## 🔤 Node.js Code Example
-
-```nodejs
-npm install express
-```
-
-## 📖 Node.js Technical Vocabulary
+**Node.js Technical Vocabulary**
 
 > Consequat occaecat veniam et proident sint ullamco officia velit sit tempor nostrud aliqua do nostrud.
 
-## 📁 Repository Content
+## 🗂️ Repository Content
 
 ### → [`klerith/`](./klerith/)
 
