@@ -5,6 +5,7 @@
 // --- Class 42: Winston, Node.js Logger ---
 // --- Class 43: Winston, Node.js Logger Part 2 ---
 // --- Class 48: Migrate Project to TypeScript ---
+// --- Class 68: Testing logger.plugin.ts script with Jest ---
 
 // Import Winston and its format utilities
 import winston, { format } from "winston";
@@ -13,7 +14,7 @@ import winston, { format } from "winston";
 const { combine, timestamp, json } = format;
 
 // Create a Winston logger instance with file transports
-const logger = winston.createLogger({
+export const logger = winston.createLogger({
   level: "info",
   format: combine(timestamp(), json()),
   transports: [
