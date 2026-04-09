@@ -5,6 +5,7 @@
 // --- Class 31: Adapter Pattern ---
 // --- Class 48: Migrate Project to TypeScript ---
 // --- Class 64: Testing get-age.plugin.ts script with Jest ---
+// --- Class 65: SpyOn (Object Methods) ---
 
 // Import the getAge function from the plugins module
 import { getAge } from "../../src/plugins";
@@ -35,5 +36,19 @@ describe("plugins/get-age.plugin.ts", () => {
 
     // Assert: validate that the returned age matches the expected current age
     expect(age).toBe(currentAge);
+  });
+
+  // Test case: verify that getAge returns 0 years when the current year equals the birth year
+  test("getAge() should return 0 years", () => {
+    // Arrange: mock Date.prototype.getFullYear to always return 2004
+    const spy = jest.spyOn(Date.prototype, "getFullYear").mockReturnValue(2004);
+
+    // Act: call getAge with a birthdate in the same year
+    const birthdate = "2004-07-04";
+    const age = getAge(birthdate);
+
+    // Assert: validate that the returned age is 0 and that the spy was called
+    expect(age).toBe(0);
+    expect(spy).toHaveBeenCalled();
   });
 });

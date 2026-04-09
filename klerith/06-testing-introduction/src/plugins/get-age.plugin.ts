@@ -4,6 +4,7 @@
 
 // --- Class 31: Adapter Pattern ---
 // --- Class 48: Migrate Project to TypeScript ---
+// --- Class 65: SpyOn (Object Methods) ---
 
 /**
  * Calculates the age based on a given birthdate string.
@@ -18,5 +19,7 @@
  * ```
  */
 export const getAge = (birthdate: string) => {
+  console.log({ currentYear: new Date().getFullYear() });
+
   return new Date().getFullYear() - new Date(birthdate).getFullYear();
 };
