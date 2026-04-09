@@ -5,27 +5,17 @@
 // --- Class 36: Adapter Pattern with FetchAPI ---
 // --- Class 37: Axios, Promise based HTTP Client  ---
 // --- Class 48: Migrate Project to TypeScript ---
+// --- Class 67: Testing http-client.plugin.ts script with Jest ---
 
 // Import Axios for HTTP requests
 import axios from "axios";
 
 /**
- * HTTP client plugin providing methods for common HTTP verbs.
- * Uses Axios under the hood to perform requests.
+ * httpClientPlugin provides a simple adapter around Axios
+ * exposing common HTTP methods (GET, POST, PUT, DELETE).
  */
 export const httpClientPlugin = {
-  /**
-   * Performs a GET request to the specified URL.
-   *
-   * @param url - The endpoint to fetch data from.
-   * @returns The response data from the server.
-   *
-   * @example
-   * ```ts
-   * const data = await httpClient.get("https://pokeapi.co/api/v2/pokemon/105");
-   * console.log(data.name); // "marowak"
-   * ```
-   */
+  // GET method: performs a GET request and returns the response data
   get: async (url: string) => {
     const { data } = await axios.get(url);
     return data;
@@ -34,8 +24,18 @@ export const httpClientPlugin = {
     // return response.data;
   },
 
-  // Placeholder methods for other HTTP verbs
-  post: async (url: string, body: any) => {},
-  put: async (url: string, body: any) => {},
-  delete: async (url: string) => {},
+  // POST method: placeholder implementation throwing an error
+  post: async (url: string, body: any) => {
+    throw new Error("Not implemented");
+  },
+
+  // PUT method: placeholder implementation throwing an error
+  put: async (url: string, body: any) => {
+    throw new Error("Not implemented");
+  },
+
+  // DELETE method: placeholder implementation throwing an error
+  delete: async (url: string) => {
+    throw new Error("Not implemented");
+  },
 };

@@ -4,7 +4,7 @@
 
 // --- Class 31: Adapter Pattern ---
 // --- Class 48: Migrate Project to TypeScript ---
-// --- Class 67: Testing get-uuidv4.plugin.ts script with Jest ---
+// --- Class 66: Testing get-uuidv4.plugin.ts script with Jest ---
 
 // Import the getUUIDV4 function from the plugins module
 import { getUUIDV4 } from "../../src/plugins";
