@@ -6,6 +6,7 @@
 // --- Class 43: Winston, Node.js Logger Part 2 ---
 // --- Class 48: Migrate Project to TypeScript ---
 // --- Class 68: Testing logger.plugin.ts script with Jest ---
+// --- Class 69: Testing Coverage ---
 
 // Import the buildLogger factory function and the base Winston logger instance
 import { buildLogger, logger as winstonLogger } from "../../src/plugins";
@@ -41,6 +42,28 @@ describe("plugins/logger.plugin.ts", () => {
         message: expect.any(String),
         service: expect.any(String),
         timestamp: expect.any(String),
+      }),
+    );
+  });
+
+  // Test case: verify that logger.error delegates to the underlying Winston logger
+  test("logger.error should log a message", () => {
+    // Arrange: spy on the base Winston logger's error method
+    const winstonLoggerMock = jest.spyOn(winstonLogger, "error");
+
+    // Act: build a logger for a test service and log an error message
+    const message = "test message";
+    const service = "test service";
+    const logger = buildLogger(service);
+    logger.error(message);
+
+    // Assert: validate that the Winston logger was called with expected arguments
+    expect(winstonLoggerMock).toHaveBeenCalledWith(
+      "error",
+      expect.objectContaining({
+        message: expect.any(String),
+        service: expect.any(String),
+        at: expect.any(String),
       }),
     );
   });
