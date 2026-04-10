@@ -1,8 +1,10 @@
 # Testing Introduction Folder
 
-Dolor et nisi labore incididunt dolor excepteur elit non aliquip proident consectetur aute laborum. Anim culpa ea anim adipisicing nulla minim ipsum mollit cillum. Ea excepteur qui anim proident sunt officia. Quis laborum culpa deserunt est eiusmod amet amet do ad exercitation.
+The `06-testing-introduction` folder is dedicated to exploring automated testing in Node.js using Jest and TypeScript. It provides a practical environment where different plugins (`get-age`, `get-uuidv4`, `httpClient`, and `logger`) are tested with clear, reproducible examples. Each test suite demonstrates how to apply the Arrange–Act–Assert pattern, how to mock system methods with `jest.spyOn`, and how to validate structured outputs with coverage reports.
 
-> Enim quis sunt ex ea officia aliquip pariatur anim nostrud dolor cupidatat eiusmod nostrud id. Enim amet est adipisicing esse ullamco proident ipsum fugiat cillum cillum ipsum ut ut. Amet tempor proident consectetur officia sunt esse magna fugiat tempor est duis velit commodo dolore.
+> This folder also integrates testing into the build workflow. The `package.json` scripts ensure that all Jest tests must pass before TypeScript compilation proceeds, while `tsconfig.json` is configured with `rootDir` and `outDir` to maintain a clean separation between source (`src/`) and compiled output (`dist/`).
+>
+> A `.gitignore` entry excludes Jest coverage artifacts, keeping the repository lightweight and focused on source code and reproducible builds.
 
 ## 📦 Used Commands
 
