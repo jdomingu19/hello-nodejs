@@ -1,0 +1,22 @@
+{
+  "name": "07-multiplication-app",
+  "version": "0.0.1",
+  "description": "Sit amet est velit laboris sint nostrud labore do cupidatat esse do ea sunt. Proident in ad cupidatat voluptate occaecat magna dolore aute ut. Et nostrud tempor ea amet labore cillum officia sint laborum. Nostrud ipsum aute nulla elit. Ex nostrud dolor nisi nulla sit ipsum commodo est nostrud ullamco anim.",
+  "license": "ISC",
+  "author": "jdomingu19",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:nodemon": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
