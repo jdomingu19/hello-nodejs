@@ -6,3 +6,6 @@ node_modules/
 
 # Winston, Node.js logger
 *.log
+
+# Jest
+coverage/

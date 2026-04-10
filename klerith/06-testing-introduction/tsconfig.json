@@ -45,12 +45,13 @@
     "strict": true,
     "target": "esnext",
     "module": "commonjs",
+    "rootDir": "src",
     "outDir": "dist/",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "jest"]
   },
-  "include": ["src", "tests"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
