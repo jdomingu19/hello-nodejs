@@ -4,34 +4,25 @@
 
 // --- Class 74: Multiplication App Initialization ---
 // --- Class 75: Logging to Console & Create output files ---
+// --- Class 76: Argv (Argument Values) ---
 
-// Import Node.js file system module for directory and file operations
-import fs from "node:fs";
+// Capture all argument values passed to the Node.js process
+let processArgv: string[] = process.argv;
 
-// Define the base number for which the multiplication table will be generated
-const baseNumber = 5;
+console.log(processArgv);
+// [
+//   '...\\node_modules\\ts-node\\dist\\bin.js',
+//   '...\\src\\index.ts',
+//   '-b',
+//   '10'
+// ]
 
-// Build the output message containing the formatted header and multiplication table
-let outputMessage = "";
-const headerMessage = `=============================
-  The ${baseNumber} times table  
-=============================\n`;
+// Verify the type of process.argv (an array object)
+console.log(typeof processArgv); // object
 
-for (let i = 1; i <= 10; i++) {
-  outputMessage += `${baseNumber} * ${i} = ${baseNumber * i}\n`;
-}
-outputMessage = headerMessage + outputMessage;
+// Destructure the argv array into executable path, script path, and remaining arguments
+const [tsnode, indexTS, ...args] = processArgv;
 
-// Print the multiplication table to the console
-console.log(outputMessage);
-
-// Define the output folder path and write the multiplication table to a text file
-const outputPath = `outputs`;
-
-fs.mkdirSync(outputPath, { recursive: true });
-fs.writeFileSync(`${outputPath}/${baseNumber}-times-table.txt`, outputMessage, {
-  encoding: "utf8",
-});
-
-// Confirm successful file creation in the console
-console.log(`File created successfully!`);
+console.log({ tsnode }); // { tsnode: '...\\node_modules\\ts-node\\dist\\bin.js' }
+console.log({ indexTS }); // { indexTS: '...\\src\\index.ts' }
+console.log({ args }); // { args: [ '-b', '10' ] }

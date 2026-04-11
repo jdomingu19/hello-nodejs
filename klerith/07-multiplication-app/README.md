@@ -36,4 +36,33 @@ Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
 npm run dev:nodemon
 ```
 
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm run build
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+node dist/index.js
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+node dist/index.js --base 42
+```
+
+## Sobre los Argv en Node.js
+
+> Ullamco enim elit consequat cupidatat mollit aute elit anim anim est incididunt consequat ullamco. Fugiat reprehenderit cillum et consequat officia dolor magna ut duis.
+
+- `node dist/index.js --argument`
+
+- `node dist/index.js -a`
+- `node dist/index.js argument`
+- `node dist/index.js --argument=value`
+- `node dist/index.js -a=value`
+
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
