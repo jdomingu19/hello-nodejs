@@ -1,2 +1,11 @@
-# From Visual Studio Code
+# Node.js
+**/node_modules/
+
+# Jest Testing
+**/coverage/
+
+# Build Artifacts
+**/dist/
+
+# Visual Studio Code
 .vscode
