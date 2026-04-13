@@ -54,6 +54,36 @@ Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
 node dist/index.js --base 42
 ```
 
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm i yargs
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm i yargs@17.7.2
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm i yargs@next
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm i yargs@latest
+```
+
+Lorem labore aliquip amet proident pariatur deserunt fugiat ad velit.
+
+```bash
+npm i @types/yargs --save-dev
+```
+
 ## Sobre los Argv en Node.js
 
 > Ullamco enim elit consequat cupidatat mollit aute elit anim anim est incididunt consequat ullamco. Fugiat reprehenderit cillum et consequat officia dolor magna ut duis.
