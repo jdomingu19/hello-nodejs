@@ -1,20 +1,18 @@
 // Hello, Node.js! @jdomingu19
 // Udemy Course by @Klerith (2023)
-// src/index.ts
+// src/backups/class-078.ts
 
 // --- Class 74: Multiplication App Initialization ---
 // --- Class 75: Logging to Console & Create output files ---
 // --- Class 76: Argv (Argument Values) ---
 // --- Class 77: Yargs Package ---
 // --- Class 78: IIFE (Immediately Invoked Function Expressions) ---
-// --- Class 79: Yargs Options ---
-
-// Import custom plugin configurations for parsing arguments with yargs
-import { yargsWithoutBin } from "./config/plugins/args.plugin";
 
 // Wrap program execution inside an async IIFE to isolate scope and allow await
 (async () => {
   await main();
+  console.log("Hello, IIFE!");
+  console.log("Program End");
 })();
 
 /**
@@ -23,10 +21,10 @@ import { yargsWithoutBin } from "./config/plugins/args.plugin";
  * @returns Promise<void>
  *
  * @remarks
- * This function demonstrates how parsed command-line arguments are accessed
- * using Yargs with configured options (base, limit, show). The parsed object
- * is printed to the console for inspection.
+ * This function represents the starting logic of the program. It is invoked
+ * immediately inside the IIFE, ensuring that asynchronous operations can be
+ * awaited and that the program flow is clearly defined.
  */
 async function main(): Promise<void> {
-  console.log(yargsWithoutBin);
+  console.log("Program Start");
 }
