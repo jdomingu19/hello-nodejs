@@ -3,6 +3,10 @@
 // src/presentation/server-app.ts
 
 // --- Class 82: Refactor Code Logic ---
+// --- Class 84: CreateTable, UseCase ---
+
+// Import CreateTable use case from domain layer to handle multiplication logic
+import { CreateTable } from "../domain/use-cases/create-table.use-case";
 
 /**
  * Defines the shape of options passed to ServerApp.run().
@@ -18,16 +22,17 @@ interface RunOptions {
 }
 
 /**
- * Presentation layer class responsible for running the application.
+ * Presentation layer class responsible for orchestrating application logic.
  *
  * @remarks
- * - Encapsulates program execution logic in a static run() method.
- * - Receives validated CLI arguments through RunOptions.
- * - Provides a clear separation of concerns between entry point and business logic.
+ * - Delegates multiplication table generation to the domain use case (CreateTable).
+ * - Encapsulates execution flow and console output.
+ * - Demonstrates separation of concerns between presentation and domain layers.
  */
 export class ServerApp {
-  static run(options: RunOptions) {
+  static run({ base, limit, printTable }: RunOptions) {
     console.log("Server running...");
-    console.log({ options });
+    const table = new CreateTable().execute({ base, limit });
+    if (printTable) console.log(table);
   }
 }
