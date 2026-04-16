@@ -8,9 +8,13 @@
 // --- Class 77: Yargs Package ---
 // --- Class 78: IIFE (Immediately Invoked Function Expressions) ---
 // --- Class 79: Yargs Options ---
+// --- Class 82: Refactor Code Logic ---
 
-// Import custom plugin configurations for parsing arguments with yargs
+// Import parsed CLI arguments from custom yargs configuration
 import { yargsWithoutBin } from "./config/plugins/args.plugin";
+
+// Import ServerApp presentation layer to handle application logic
+import { ServerApp } from "./presentation/server-app";
 
 // Wrap program execution inside an async IIFE to isolate scope and allow await
 (async () => {
@@ -23,10 +27,12 @@ import { yargsWithoutBin } from "./config/plugins/args.plugin";
  * @returns Promise<void>
  *
  * @remarks
- * This function demonstrates how parsed command-line arguments are accessed
- * using Yargs with configured options (base, limit, show). The parsed object
- * is printed to the console for inspection.
+ * - Extracts CLI arguments (base, limit, show) from yargs configuration.
+ * - Delegates execution to ServerApp.run() for centralized logic handling.
+ * - Demonstrates refactoring by moving core functionality into a presentation layer.
  */
 async function main(): Promise<void> {
-  console.log(yargsWithoutBin);
+  const { b: base, l: limit, s: printTable } = yargsWithoutBin;
+
+  ServerApp.run({ base, limit, printTable });
 }
