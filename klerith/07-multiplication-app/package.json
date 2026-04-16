@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "dev:nodemon": "nodemon",
+    "dev:i-class-081": "npx ts-node src/instructor-answer-class-081.ts",
+    "dev:my-class-081": "npx ts-node src/my-answer-class-081.ts",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/index.js"
   },
