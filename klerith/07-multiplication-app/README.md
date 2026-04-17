@@ -1,8 +1,8 @@
-# Multiplication App Folder
+# 🗂️ Multiplication App Folder
 
-Sit amet est velit laboris sint nostrud labore do cupidatat esse do ea sunt. Proident in ad cupidatat voluptate occaecat magna dolore aute ut. Et nostrud tempor ea amet labore cillum officia sint laborum. Nostrud ipsum aute nulla elit. Ex nostrud dolor nisi nulla sit ipsum commodo est nostrud ullamco anim.
+This folder contains the implementation of a Node.js application designed to generate multiplication tables with configurable options. The project demonstrates how to structure a TypeScript application, parse command-line arguments using Yargs, and persist results to dynamically created output files. It also showcases clean architecture principles by separating concerns into domain use cases, configuration plugins, and presentation layers.
 
-> Qui exercitation sit laborum sunt id aliquip et aliquip. Cillum velit consectetur esse fugiat elit commodo exercitation nisi ut id exercitation occaecat consectetur amet. Id reprehenderit qui fugiat nisi veniam irure.
+> The goal of this app is to provide a practical example of handling CLI arguments, validating input, and producing both console output and file-based results. It highlights how to extend functionality step by step, following professional development practices.
 
 ## 📦 Used Commands
 
@@ -174,7 +174,7 @@ Run the application with long flag assignment syntax to set base, limit, and sho
 npx ts-node src/index.ts --base=5 --limit=15 --show=true
 ```
 
-## About Argv in Node.js
+## 🟩 About Argv in Node.js
 
 > When working with command-line arguments in Node.js, there are multiple syntaxes available to pass values. You can use short flags (`-a`), long flags (`--alias`), and assign values either with a space or with an equals sign. These variations are all interpreted by Node.js and libraries like Yargs, giving flexibility in how arguments are written and parsed.
 
@@ -214,6 +214,23 @@ node dist/index.js --alias value
 
 # Long flag with equals sign
 node dist/index.js --alias=value
+```
+
+### 🎯 Command Examples
+
+> The following examples demonstrate how to run the application with different configurations. Each command generates a multiplication table with a specific base, limit, and output settings. Custom file names (`-n`) and paths (`-p`) are used to organize the generated tables into the `named-times-tables` directory.
+
+```bash
+npx ts-node src/index.ts -b 1 -l 24 -s -n one-times-table -p named-times-tables
+npx ts-node src/index.ts -b 2 -l 24 -s -n two-times-table -p named-times-tables
+npx ts-node src/index.ts -b 3 -l 24 -s -n three-times-table -p named-times-tables
+npx ts-node src/index.ts -b 4 -l 24 -s -n four-times-table -p named-times-tables
+npx ts-node src/index.ts -b 5 -l 24 -s -n five-times-table -p named-times-tables
+npx ts-node src/index.ts -b 6 -l 24 -s -n six-times-table -p named-times-tables
+npx ts-node src/index.ts -b 7 -l 24 -s -n seven-times-table -p named-times-tables
+npx ts-node src/index.ts -b 8 -l 24 -s -n eight-times-table -p named-times-tables
+npx ts-node src/index.ts -b 9 -l 24 -s -n nine-times-table -p named-times-tables
+npx ts-node src/index.ts -b 10 -l 24 -s -n ten-times-table -p named-times-tables
 ```
 
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
