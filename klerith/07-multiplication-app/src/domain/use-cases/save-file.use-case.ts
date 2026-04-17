@@ -3,9 +3,13 @@
 // src/domain/use-cases/save-file.use-case.ts
 
 // --- Class 85: SaveFile, UseCase ---
+// --- Class 86: Adding fileName & filePath Argument ---
 
 // Import Node.js file system module for directory and file operations
 import fs from "node:fs";
+
+// Import Node.js path module to safely compose directory and file paths
+import path from "node:path";
 
 /**
  * Contract definition for the SaveFile use case.
@@ -36,7 +40,9 @@ export interface SaveFileOptions {
  * Concrete implementation of the SaveFile use case.
  *
  * @remarks
- * - Creates the target directory if it does not exist.
+ * - Dynamically resolves the target directory based on filePath argument.
+ * - Uses path.join() to safely build directory and file paths across platforms.
+ * - Creates the directory recursively if it does not exist.
  * - Writes the provided content into a .txt file with UTF-8 encoding.
  * - Returns true if the file was successfully created, false otherwise.
  * - Demonstrates error handling by catching exceptions and logging them.
@@ -52,8 +58,18 @@ export class SaveFile implements SaveFileUseCase {
     filePath = "outputs",
   }: SaveFileOptions): boolean {
     try {
-      fs.mkdirSync(filePath, { recursive: true });
-      fs.writeFileSync(`${filePath}/${fileName}.txt`, fileContent, {
+      // Resolve base directory: default 'outputs' or nested under 'outputs'
+      const basePath =
+        filePath === "outputs" ? filePath : path.join("outputs", filePath);
+
+      // Ensure directory exists before writing file
+      fs.mkdirSync(basePath, { recursive: true });
+
+      // Build full file path using path.join for cross-platform safety
+      const writeFileString = path.join(basePath, `${fileName}.txt`);
+
+      // Write file content with UTF-8 encoding
+      fs.writeFileSync(writeFileString, fileContent, {
         encoding: "utf8",
       });
       return true;
