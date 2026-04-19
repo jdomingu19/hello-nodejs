@@ -174,6 +174,36 @@ Run the application with long flag assignment syntax to set base, limit, and sho
 npx ts-node src/index.ts --base=5 --limit=15 --show=true
 ```
 
+Consectetur sunt in minim duis irure est nisi nostrud excepteur aliqua occaecat id ut laboris.
+
+```bash
+npm install -D jest @types/jest ts-jest supertest
+```
+
+Consectetur sunt in minim duis irure est nisi nostrud excepteur aliqua occaecat id ut laboris.
+
+```bash
+npx create-jest
+```
+
+Consectetur sunt in minim duis irure est nisi nostrud excepteur aliqua occaecat id ut laboris.
+
+```bash
+npm run test
+```
+
+Consectetur sunt in minim duis irure est nisi nostrud excepteur aliqua occaecat id ut laboris.
+
+```bash
+npm run test:watch
+```
+
+Consectetur sunt in minim duis irure est nisi nostrud excepteur aliqua occaecat id ut laboris.
+
+```bash
+npm run test:coverage
+```
+
 ## 🟩 About Argv in Node.js
 
 > When working with command-line arguments in Node.js, there are multiple syntaxes available to pass values. You can use short flags (`-a`), long flags (`--alias`), and assign values either with a space or with an equals sign. These variations are all interpreted by Node.js and libraries like Yargs, giving flexibility in how arguments are written and parsed.
