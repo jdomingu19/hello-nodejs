@@ -3,6 +3,7 @@
 // src/domain/use-cases/create-table.use-case.ts
 
 // --- Class 84: CreateTable, UseCase ---
+// --- Class 94: Testing CreateTable UseCase ---
 
 /**
  * Contract definition for the CreateTable use case.
@@ -30,19 +31,29 @@ export interface CreateTableOptions {
  * Concrete implementation of the CreateTable use case.
  *
  * @remarks
- * - Generates a multiplication table string based on provided options.
- * - Applies Dependency Injection (DI) principles for future extensibility.
- * - Defaults limit to 10 when not explicitly passed.
+ * - Encapsulates the logic to generate a multiplication table as a string.
+ * - Accepts a numeric base and an optional limit (default 10).
+ * - Iterates from 1 up to the limit, appending each multiplication result.
+ * - Joins rows with newline characters for readability.
+ * - Returns the complete multiplication table as a formatted string.
  */
 export class CreateTable implements CreateTableUseCase {
   constructor() {
     // Dependency Injection (DI) placeholder for future services
   }
 
+  /**
+   * Execute the multiplication table generation.
+   *
+   * @param base - Numeric base for the multiplication table
+   * @param limit - Maximum multiplier (defaults to 10 if not provided)
+   * @returns A string containing the formatted multiplication table
+   */
   public execute({ base, limit = 10 }: CreateTableOptions) {
     let outputMessage = "";
     for (let i = 1; i <= limit; i++) {
-      outputMessage += `${base} * ${i} = ${base * i}\n`;
+      outputMessage += `${base} * ${i} = ${base * i}`;
+      if (i < limit) outputMessage += "\n";
     }
     return outputMessage;
   }
