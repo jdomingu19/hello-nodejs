@@ -4,10 +4,10 @@
   "description": "Sit amet est velit laboris sint nostrud labore do cupidatat esse do ea sunt. Proident in ad cupidatat voluptate occaecat magna dolore aute ut. Et nostrud tempor ea amet labore cillum officia sint laborum. Nostrud ipsum aute nulla elit. Ex nostrud dolor nisi nulla sit ipsum commodo est nostrud ullamco anim.",
   "license": "ISC",
   "author": "jdomingu19",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts -b 9 -l 24 -s",
+    "dev": "ts-node src/index.ts",
     "dev:nodemon": "nodemon -b 9",
     "dev:i-class-081": "npx ts-node src/instructor-answer-class-081.ts",
     "dev:my-class-081": "npx ts-node src/my-answer-class-081.ts",

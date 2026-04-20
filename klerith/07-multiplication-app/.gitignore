@@ -9,3 +9,6 @@ coverage/
 
 # Build Artifact
 dist/
+
+# Outputs Files
+./outputs/
