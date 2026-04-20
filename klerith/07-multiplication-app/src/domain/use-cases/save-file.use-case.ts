@@ -4,6 +4,7 @@
 
 // --- Class 85: SaveFile, UseCase ---
 // --- Class 86: Adding fileName & filePath Argument ---
+// --- Class 96: Testing SaveFile UseCase Custom Values ---
 
 // Import Node.js file system module for directory and file operations
 import fs from "node:fs";
@@ -40,40 +41,41 @@ export interface SaveFileOptions {
  * Concrete implementation of the SaveFile use case.
  *
  * @remarks
- * - Dynamically resolves the target directory based on filePath argument.
- * - Uses path.join() to safely build directory and file paths across platforms.
- * - Creates the directory recursively if it does not exist.
- * - Writes the provided content into a .txt file with UTF-8 encoding.
+ * - Encapsulates the logic to persist string content into a file.
+ * - Accepts optional fileName and filePath arguments with defaults.
+ * - Ensures the target directory exists before writing the file.
+ * - Writes content synchronously with UTF-8 encoding.
  * - Returns true if the file was successfully created, false otherwise.
- * - Demonstrates error handling by catching exceptions and logging them.
+ * - Demonstrates basic error handling by catching exceptions and logging them.
  */
 export class SaveFile implements SaveFileUseCase {
   constructor() {
     // Dependency Injection (DI) placeholder for future storage repositories
   }
 
+  /**
+   * Execute the file persistence operation.
+   *
+   * @param fileContent - String content to be written into the file
+   * @param fileName - Optional name of the file (defaults to 'times-table')
+   * @param filePath - Optional directory path where the file will be saved (defaults to 'outputs')
+   * @returns Boolean indicating success (true) or failure (false)
+   */
   public execute({
     fileContent,
     fileName = "times-table",
     filePath = "outputs",
   }: SaveFileOptions): boolean {
     try {
-      // Resolve base directory: default 'outputs' or nested under 'outputs'
-      const basePath =
-        filePath === "outputs" ? filePath : path.join("outputs", filePath);
-
       // Ensure directory exists before writing file
-      fs.mkdirSync(basePath, { recursive: true });
-
-      // Build full file path using path.join for cross-platform safety
-      const writeFileString = path.join(basePath, `${fileName}.txt`);
+      fs.mkdirSync(filePath, { recursive: true });
 
       // Write file content with UTF-8 encoding
-      fs.writeFileSync(writeFileString, fileContent, {
-        encoding: "utf8",
-      });
+      fs.writeFileSync(`${filePath}/${fileName}.txt`, fileContent);
+
       return true;
     } catch (error) {
+      // Log error and return false to indicate failure
       console.error(error);
       return false;
     }

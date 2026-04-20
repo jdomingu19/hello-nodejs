@@ -11,4 +11,4 @@ coverage/
 dist/
 
 # Outputs Files
-./outputs/
+outputs/
