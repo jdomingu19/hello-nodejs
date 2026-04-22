@@ -6,6 +6,7 @@
 // --- Class 86: Adding fileName & filePath Argument ---
 // --- Class 95: Testing SaveFile UseCase ---
 // --- Class 96: Testing SaveFile UseCase Custom Values ---
+// --- Class 97: SpyOn & Mock Implementation ---
 
 // Import Node.js file system module to validate file creation and cleanup
 import fs from "node:fs";
@@ -74,5 +75,43 @@ describe("SaveFileUseCase", () => {
     expect(result).toBe(true);
     expect(fileExists).toBe(true);
     expect(fileContent).toBe(customOptions.fileContent);
+  });
+
+  // Validate behavior when directory creation fails
+  test("Should return false if directory could not be created", () => {
+    // Arrange: mock fs.mkdirSync to throw a custom error
+    const saveFile = new SaveFile();
+    const mkdirSyncSpy = jest.spyOn(fs, "mkdirSync").mockImplementation(() => {
+      throw new Error("This is a custom error message for testing!");
+    });
+
+    // Act: execute SaveFile use case with custom options
+    const result = saveFile.execute(customOptions);
+
+    // Assert: verify that execution returns false on error
+    expect(result).toBe(false);
+
+    // Cleanup: restore original fs.mkdirSync implementation
+    mkdirSyncSpy.mockRestore();
+  });
+
+  // Validate behavior when file writing fails
+  test("Should return false if file could not be created", () => {
+    // Arrange: mock fs.writeFileSync to throw a custom error
+    const saveFile = new SaveFile();
+    const writeFileSyncSpy = jest
+      .spyOn(fs, "writeFileSync")
+      .mockImplementation(() => {
+        throw new Error("This is a custom-writing error message for testing!");
+      });
+
+    // Act: execute SaveFile use case with default options
+    const result = saveFile.execute({ fileContent: customOptions.fileContent });
+
+    // Assert: verify that execution returns false on error
+    expect(result).toBe(false);
+
+    // Cleanup: restore original fs.writeFileSync implementation
+    writeFileSyncSpy.mockRestore();
   });
 });

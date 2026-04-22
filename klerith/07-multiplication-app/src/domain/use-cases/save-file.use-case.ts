@@ -75,8 +75,6 @@ export class SaveFile implements SaveFileUseCase {
 
       return true;
     } catch (error) {
-      // Log error and return false to indicate failure
-      console.error(error);
       return false;
     }
   }
