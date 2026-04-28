@@ -5,12 +5,10 @@
 // --- Class 85: SaveFile, UseCase ---
 // --- Class 86: Adding fileName & filePath Argument ---
 // --- Class 96: Testing SaveFile UseCase Custom Values ---
+// --- Class 102: Testing ServerApp with Unit Tests ---
 
 // Import Node.js file system module for directory and file operations
 import fs from "node:fs";
-
-// Import Node.js path module to safely compose directory and file paths
-import path from "node:path";
 
 /**
  * Contract definition for the SaveFile use case.
