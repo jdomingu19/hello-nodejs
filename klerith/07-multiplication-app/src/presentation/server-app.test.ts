@@ -9,6 +9,7 @@
 // --- Class 100: Testing ServerApp ---
 // --- Class 101: Testing ServerApp with Options ---
 // --- Class 102: Testing ServerApp with Unit Tests ---
+// --- Class 103: Debugging Testing ServerApp ---
 
 // Import ServerApp class and related use cases from presentation and domain layers
 import { ServerApp } from "./server-app";
@@ -42,34 +43,34 @@ describe("Testing server-app.ts", () => {
   });
 
   // Validate behavior when running ServerApp with custom options
-  // test("Should run ServerApp with options", () => {
-  //   // Arrange: spy on console.log, CreateTable.execute, and SaveFile.execute
-  //   const logSpy = jest.spyOn(console, "log");
-  //   const createTableSpy = jest.spyOn(CreateTable.prototype, "execute");
-  //   const saveFileSpy = jest.spyOn(SaveFile.prototype, "execute");
+  test("Should run ServerApp with options", () => {
+    // Arrange: spy on console.log, CreateTable.execute, and SaveFile.execute
+    const logSpy = jest.spyOn(console, "log");
+    const createTableSpy = jest.spyOn(CreateTable.prototype, "execute");
+    const saveFileSpy = jest.spyOn(SaveFile.prototype, "execute");
 
-  //   // Act: run ServerApp with provided options
-  //   ServerApp.run(options);
+    // Act: run ServerApp with provided options
+    ServerApp.run(options);
 
-  //   // Assert: verify console output and calls to use cases
-  //   expect(logSpy).toHaveBeenCalledTimes(3);
-  //   expect(logSpy).toHaveBeenCalledWith("Server running...");
-  //   expect(logSpy).toHaveBeenCalledWith("File created successfully!");
-  //   expect(logSpy).toHaveBeenLastCalledWith("File created successfully!");
+    // Assert: verify console output and calls to use cases
+    expect(logSpy).toHaveBeenCalledTimes(3);
+    expect(logSpy).toHaveBeenCalledWith("Server running...");
+    expect(logSpy).toHaveBeenCalledWith("File created successfully!");
+    expect(logSpy).toHaveBeenLastCalledWith("File created successfully!");
 
-  //   expect(createTableSpy).toHaveBeenCalledTimes(1);
-  //   expect(createTableSpy).toHaveBeenCalledWith({
-  //     base: options.base,
-  //     limit: options.limit,
-  //   });
+    expect(createTableSpy).toHaveBeenCalledTimes(1);
+    expect(createTableSpy).toHaveBeenCalledWith({
+      base: options.base,
+      limit: options.limit,
+    });
 
-  //   expect(saveFileSpy).toHaveBeenCalledTimes(1);
-  //   expect(saveFileSpy).toHaveBeenCalledWith({
-  //     fileContent: expect.any(String),
-  //     filePath: options.filePath,
-  //     fileName: options.fileName,
-  //   });
-  // });
+    expect(saveFileSpy).toHaveBeenCalledTimes(1);
+    expect(saveFileSpy).toHaveBeenCalledWith({
+      fileContent: expect.any(String),
+      filePath: options.filePath,
+      fileName: options.fileName,
+    });
+  });
 
   // Validate behavior when running ServerApp with mocked dependencies
   test("Should run with custom mocked values", () => {
