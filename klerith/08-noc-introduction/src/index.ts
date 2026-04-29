@@ -3,11 +3,23 @@
 // src/index.ts
 
 // --- Class 109: Initializing NOC App ---
+// --- Class 110: ServerApp Setup and Configuration ---
 
-// Define alias string and skills array for demonstration
-const myAlias: string = "@jdomingu19";
-const mySkills: string[] = ["TypeScript", "React Native", "Expo"];
+// Import ServerApp class from presentation layer
+import { ServerApp } from "./presentation/server";
 
-// Log alias and skills to console for initial output validation
-console.log({ myAlias }); // { myAlias: '@jdomingu19' }
-console.log({ mySkills }); // { mySkills: [ 'TypeScript', 'React Native', 'Expo' ] }
+/**
+ * Immediately invoked function expression (IIFE)
+ * to bootstrap the main application logic.
+ */
+(async () => {
+  main();
+})();
+
+/**
+ * Main function responsible for starting the server
+ * by calling ServerApp.start().
+ */
+function main() {
+  ServerApp.start();
+}
