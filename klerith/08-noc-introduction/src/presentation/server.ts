@@ -3,35 +3,34 @@
 // presentation/server.ts
 
 // --- Class 110: ServerApp Setup and Configuration ---
+// --- Class 111: CronJob & Cron Tasks ---
+// --- Class 112: CronService Setup and Configuration ---
 
 // Import CronJob class from cron package to schedule recurring tasks
-import { CronJob } from "cron";
+import { CronService } from "./cron/cron-service";
 
 /**
  * ServerApp class provides the entry point
  * for starting the application server and
- * configuring scheduled background jobs.
+ * registering scheduled background jobs.
  */
 export class ServerApp {
   /**
    * Start method initializes the server,
-   * logs a startup message, and sets up
-   * a CronJob that runs every 3 seconds.
+   * logs a startup message, and registers
+   * a recurring CronService job.
    *
    * @remarks
-   * This method demonstrates how to integrate
-   * cron-based scheduling into a Node.js app.
+   * This method demonstrates how to delegate
+   * cron-based scheduling to a dedicated service.
    */
-  public static start() {
+  public static start(): void {
     console.log("Server started...");
 
-    // Create a CronJob scheduled to run every 3 seconds
-    const job = new CronJob("*/3 * * * * *", () => {
+    // Register a job that executes every 5 seconds
+    CronService.createJob("*/5 * * * * *", () => {
       const date = new Date();
-      console.log("You will see this message every three second!", date);
+      console.log("Cron job executed every five seconds: ", date.toISOString());
     });
-
-    // Start the CronJob execution
-    job.start();
   }
 }
