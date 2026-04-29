@@ -18,6 +18,18 @@ Do ex ipsum veniam enim non elit culpa reprehenderit. Commodo commodo duis sit c
 > npx tsc --init --outDir dist/ --rootDir src
 > ```
 
+> 3. Do ex quis velit consectetur id sint laborum anim.
+>
+> ```bash
+> npm run dev
+> ```
+
+> 4. Do ex quis velit consectetur id sint laborum anim.
+>
+> ```bash
+> npm install cron
+> ```
+
 ##
 
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
