@@ -5,9 +5,13 @@
 // --- Class 110: ServerApp Setup and Configuration ---
 // --- Class 111: CronJob & Cron Tasks ---
 // --- Class 112: CronService Setup and Configuration ---
+// --- Class 113: CheckService, UseCase ---
 
-// Import CronJob class from cron package to schedule recurring tasks
+// Import CronService utility to manage recurring tasks
 import { CronService } from "./cron/cron-service";
+
+// Import CheckService use case to verify external services
+import { CheckService } from "../domain/use-cases/checks/check-service";
 
 /**
  * ServerApp class provides the entry point
@@ -18,19 +22,19 @@ export class ServerApp {
   /**
    * Start method initializes the server,
    * logs a startup message, and registers
-   * a recurring CronService job.
+   * a recurring job that checks service availability.
    *
    * @remarks
-   * This method demonstrates how to delegate
-   * cron-based scheduling to a dedicated service.
+   * This demonstrates integration of domain use cases
+   * (CheckService) with infrastructure scheduling (CronService).
    */
   public static start(): void {
     console.log("Server started...");
 
     // Register a job that executes every 5 seconds
+    // and checks the availability of Google
     CronService.createJob("*/5 * * * * *", () => {
-      const date = new Date();
-      console.log("Cron job executed every five seconds: ", date.toISOString());
+      new CheckService().execute("https://google.com/");
     });
   }
 }
