@@ -1,0 +1,33 @@
+{
+  "posts": [
+    { "id": "1", "title": "Introduction to Node.js", "views": 150 },
+    { "id": "2", "title": "Understanding TypeScript Basics", "views": 230 },
+    { "id": "3", "title": "Building REST APIs with Express", "views": 310 },
+    { "id": "4", "title": "Mastering Async/Await in JavaScript", "views": 275 },
+    { "id": "5", "title": "Error Handling Best Practices", "views": 190 },
+    { "id": "6", "title": "Working with Databases in Node.js", "views": 340 },
+    { "id": "7", "title": "Testing with Jest and Supertest", "views": 220 },
+    { "id": "8", "title": "Deploying Node.js Apps to Heroku", "views": 410 },
+    { "id": "9", "title": "Exploring ES Modules in Node.js", "views": 165 },
+    { "id": "10", "title": "Performance Optimization Techniques", "views": 380 }
+  ],
+  "comments": [
+    { "id": "1", "text": "Great introduction, very clear!", "postId": "1" },
+    { "id": "2", "text": "TypeScript examples were helpful.", "postId": "2" },
+    { "id": "3", "text": "Loved the REST API walkthrough.", "postId": "3" },
+    { "id": "4", "text": "Async/Await finally makes sense!", "postId": "4" },
+    { "id": "5", "text": "Error handling tips saved me time.", "postId": "5" },
+    {
+      "id": "6",
+      "text": "Database section was well explained.",
+      "postId": "6"
+    },
+    { "id": "7", "text": "Testing examples were practical.", "postId": "7" },
+    { "id": "8", "text": "Deployment guide worked perfectly.", "postId": "8" },
+    { "id": "9", "text": "ES Modules are clearer now.", "postId": "9" },
+    { "id": "10", "text": "Optimization tips improved my app.", "postId": "10" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -6,6 +6,7 @@
 // --- Class 111: CronJob & Cron Tasks ---
 // --- Class 112: CronService Setup and Configuration ---
 // --- Class 113: CheckService, UseCase ---
+// --- Class 114: JSON Server ---
 
 // Import CronService utility to manage recurring tasks
 import { CronService } from "./cron/cron-service";
@@ -32,9 +33,13 @@ export class ServerApp {
     console.log("Server started...");
 
     // Register a job that executes every 5 seconds
-    // and checks the availability of Google
+    // and checks the availability of the local JSON Server
     CronService.createJob("*/5 * * * * *", () => {
-      new CheckService().execute("https://google.com/");
+      // Example: check external service like Google
+      // new CheckService().execute("https://google.com/");
+
+      // Current use case: check local JSON Server running on port 3000
+      new CheckService().execute("http://localhost:3000/");
     });
   }
 }
