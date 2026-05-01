@@ -7,6 +7,7 @@
 // --- Class 112: CronService Setup and Configuration ---
 // --- Class 113: CheckService, UseCase ---
 // --- Class 114: JSON Server ---
+// --- Class 115: Dependency Injection (DI) ---
 
 // Import CronService utility to manage recurring tasks
 import { CronService } from "./cron/cron-service";
@@ -33,13 +34,21 @@ export class ServerApp {
     console.log("Server started...");
 
     // Register a job that executes every 5 seconds
-    // and checks the availability of the local JSON Server
+    // and checks the availability of Google
     CronService.createJob("*/5 * * * * *", () => {
-      // Example: check external service like Google
-      // new CheckService().execute("https://google.com/");
+      const url = "https://google.com/";
 
-      // Current use case: check local JSON Server running on port 3000
-      new CheckService().execute("http://localhost:3000/");
+      // Inject success and error callbacks into CheckService
+      new CheckService(
+        () => console.log(`Successfully connected to '${url}'`),
+        (error) => console.log(error),
+      ).execute(url);
+
+      // Example use case: check local JSON Server running on port 3000
+      // new CheckService(
+      //   () => console.log("Local JSON Server is available"),
+      //   (error) => console.error(`Local JSON Server error: ${error}`),
+      // ).execute("http://localhost:3000/");
     });
   }
 }
