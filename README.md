@@ -36,8 +36,10 @@
 
 > Qui ut ea aute labore nisi in mollit laboris. Eiusmod ipsum est velit nisi velit nulla sit duis. Duis nulla cupidatat incididunt sit velit. Ea consequat ut laboris labore ea veniam. Nostrud ad duis dolor aliqua mollit consequat commodo. Duis officia id sit magna ea ad tempor id laboris irure cupidatat ullamco id cillum.
 
-## 📝 License
+## ⚖️ License
 
 This repository is licensed under the terms of the [Apache License 2.0](LICENSE). The license grants permission to use, modify, and distribute the code with proper attribution, while ensuring that improvements and extensions remain open and accessible to the community.
+
+##
 
 > Built with '\u{2665}' (♥) by Jesús Domínguez [@jdomingu19](https://github.com/jdomingu19/)
